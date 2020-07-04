@@ -1,0 +1,12 @@
+{
+  "type": "facebook_messenger",
+  "name": "FaceBook2",
+  "mode": "production",
+  "webhook": {
+    "url": "https://requestb.in/tqp125tq"
+  },
+  "facebook_page": {
+    "id": "114851033620668",
+    "access_token": "EAAZAqmOEDma8BAMyR1PX7AtbUN7SWevh4hNKfPIrLHfYWP3uSIEFyywxGAE5ntKthdVbLLH7j3ka21JXA3ZANYS0QVzgKY6vir8VKroIRwg6y4EUZB06yDdxHlzLmer1W365xOeo1LbdklPUkclmtu8IABlSMTMyJuqEiO4ZAgZDZD"
+  }
+}
