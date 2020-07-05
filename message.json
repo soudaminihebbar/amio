@@ -1,0 +1,12 @@
+{
+  "channel": {
+    "id": "6685593734598118153"
+  },
+  "contact": {
+    "id": "6685599440411839514"
+  },
+  "content": {
+    "type": "text",
+    "payload": "Hello world!"
+  }
+}
