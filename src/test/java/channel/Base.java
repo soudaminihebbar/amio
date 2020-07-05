@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeTest;
 
 public class Base {
 
+    public static String cliendId;
+
     @BeforeTest
     public void setup() {
         RestAssured.baseURI = "https://api.amio.io/v1/channels";
