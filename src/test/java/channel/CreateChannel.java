@@ -16,11 +16,11 @@ public class CreateChannel extends Base {
         ExtractableResponse response = RestAssured
                 .given()
                 .body(file)
-                .post()
+                .post("channels")
         .then()
         .assertThat()
                 .statusCode(201)
                 .extract();
-        cliendId = response.jsonPath().get("id");
+        clientId = response.jsonPath().get("id");
     }
 }

@@ -10,7 +10,7 @@ public class DeleteChannel extends Base {
     public void deleteChannel() {
         RestAssured
                 .given()
-                .delete(cliendId)
+                .delete("channels/"+ clientId)
                 .then()
                 .assertThat().statusCode(204);
     }

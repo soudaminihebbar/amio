@@ -1,7 +1,9 @@
 package message;
 
 import io.restassured.RestAssured;
+import lib.Base;
 import org.testng.annotations.Test;
+
 import static org.hamcrest.Matchers.hasItems;
 
 public class ListMessage extends Base {

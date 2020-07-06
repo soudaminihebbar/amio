@@ -13,7 +13,7 @@ public class GetChannels extends Base {
     public void getAllChannels() {
         ValidatableResponse response = RestAssured
                 .given()
-                .get()
+                .get("channels")
                 .then()
                 .assertThat()
                 .statusCode(200);
@@ -23,10 +23,10 @@ public class GetChannels extends Base {
     public void getAllChannelsAndVerify() {
         ValidatableResponse response = RestAssured
                 .given()
-                .get()
+                .get("channels")
                 .then()
                 .assertThat()
                 .statusCode(200)
-                .body("id", hasItem(cliendId));
+                .body("id", hasItem(clientId));
     }
 }

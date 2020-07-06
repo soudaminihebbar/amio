@@ -2,13 +2,14 @@ package message;
 
 import io.restassured.RestAssured;
 import io.restassured.response.ExtractableResponse;
+import lib.Base;
 import org.testng.annotations.Test;
 
 import java.io.File;
 
 public class CreateMessage extends Base {
     File file = new File("message.json");
-    File filemes = new File("fileMessage.json");
+    File filemessage = new File("fileMessage.json");
 
     @Test
     public void createTextMessage() {
@@ -29,7 +30,7 @@ public class CreateMessage extends Base {
 
         ExtractableResponse response = RestAssured
                 .given()
-                .body(filemes)
+                .body(filemessage)
                 .post("messages")
                 .then()
                 .assertThat()
