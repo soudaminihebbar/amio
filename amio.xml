@@ -8,4 +8,10 @@
             <class name="channel.DeleteChannel"/>
         </classes>
     </test>
+    <test name="Message">
+        <classes>
+            <class name="message.CreateMessage"/>
+            <class name="message.ListMessage"/>
+        </classes>
+    </test>
 </suite>

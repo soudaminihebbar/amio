@@ -1,0 +1,14 @@
+{
+  "channel": {
+    "id": "6685593734598118153"
+  },
+  "contact": {
+    "id": "6685599440411839514"
+  },
+  "content": {
+    "type": "video",
+    "payload": {
+      "url": "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4"
+    }
+  }
+}

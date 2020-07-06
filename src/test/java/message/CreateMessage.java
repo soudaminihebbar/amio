@@ -1,24 +1,41 @@
 package message;
 
 import io.restassured.RestAssured;
+import io.restassured.response.ExtractableResponse;
 import org.testng.annotations.Test;
 
 import java.io.File;
 
-public class CreateMessage {
+public class CreateMessage extends Base {
     File file = new File("message.json");
+    File filemes = new File("fileMessage.json");
 
     @Test
-    public void createMessage() {
-        RestAssured.baseURI = "https://api.amio.io/v1/messages";
-        RestAssured.authentication = RestAssured.oauth2("dHLupPB3GrpEFMeuYYKXyzdEC7om8PnJfTex9brAgo7s18G04LZxuX6tQxB6mcIMHh5ONNAtAHOLCi7a9JBFqmazHI");
+    public void createTextMessage() {
 
-        RestAssured
+        ExtractableResponse response = RestAssured
                 .given()
                 .body(file)
-                .post()
+                .post("messages")
                 .then()
                 .assertThat()
-                .statusCode(201);
+                .statusCode(201)
+                .extract();
+        textId = response.jsonPath().get("id");
+    }
+
+    @Test
+    public void createFileMessage() {
+
+        ExtractableResponse response = RestAssured
+                .given()
+                .body(filemes)
+                .post("messages")
+                .then()
+                .assertThat()
+                .statusCode(201)
+                .extract();
+        fileId = response.jsonPath().get("id");
+
     }
 }
